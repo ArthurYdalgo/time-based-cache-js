@@ -1,4 +1,6 @@
-class CacheStore {
+'use strict';
+
+module.exports = class CacheStore {
     constructor(cacheKeyPrefix = null) {
         this.cacheKeyPrefix = cacheKeyPrefix;
     }
