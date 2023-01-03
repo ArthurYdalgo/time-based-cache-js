@@ -1,0 +1,23 @@
+{
+  "name": "time-based-cache",
+  "version": "1.0.1",
+  "description": "A Laravel-like Cache Store for Javascript",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurYdalgo/time-based-cache-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/ArthurYdalgo/time-based-cache-js/issues"
+  },
+  "homepage": "https://github.com/ArthurYdalgo/time-based-cache-js#readme"
+}
