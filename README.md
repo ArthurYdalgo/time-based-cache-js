@@ -23,7 +23,7 @@ import CacheStore from 'time-based-cache';
 let cache_store = new CacheStore();
 ```
 
-An identifier (cacheKeyPrefix) can (and should) be set, so that you can use multiple store, the these stores can use the same cache key without any conflicts
+An identifier (cacheKeyPrefix) can (and should) be set, so that you can use multiple store, these stores can use the same cache key without any conflicts
 
 ```
 // Create a new cache with a prefix
