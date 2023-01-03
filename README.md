@@ -69,7 +69,7 @@ A value can bet set to last until a defined date
 let future_date = new Date();
 
 // Add days to the date
-future_date.setHours(date.getDays() + 15);
+future_date.setHours(future_date.getDays() + 15);
 
 // Store previously mentioned plans for 15 days
 cache_store.put('cached_plans', plans, future_date);
