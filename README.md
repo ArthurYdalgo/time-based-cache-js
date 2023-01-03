@@ -77,7 +77,7 @@ cache_store.put('cached_plans', plans, future_date);
 
 This kind of looks better than (or not, I personally hate working with dates in Javascript)
 ```
-cache_store.put('cached_plans', plans, 15 * 24 * (3600));
+cache_store.put('cached_plans', plans, 15 * 24 * 3600);
 ```
 
 ## Getting a value
