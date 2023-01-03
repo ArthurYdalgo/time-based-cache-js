@@ -2,7 +2,7 @@
 
 A [Laravel-like Cache Store](https://laravel.com/docs/8.x/cache) for Javascript. 
 
-# Instalation
+# Installation
 
 ```
 npm i time-based-cache
