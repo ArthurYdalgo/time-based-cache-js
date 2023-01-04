@@ -130,7 +130,7 @@ const Products = ({store}) => {
 
     useEffect(() => {
 		cache_store.remember(`store-${store.id}-products`, 5 * 60, () => {
-			Http.get(`/api/store/${store.id}/products`).then((res) => setInvoices(res.data.data));
+			Http.get(`/api/store/${store.id}/products`).then((res) => setProducts(res.data.data));
 		});
 
 	}, []);
