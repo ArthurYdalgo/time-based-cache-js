@@ -63,6 +63,32 @@ module.exports = class CacheStore {
 
         return this.put(key, value, ttl);
     }
+    async rememberAsync(key, ttl, callback) {
+        if (this.cacheKeyPrefix) {
+            key = this.cacheKeyPrefix + key;
+        }
+
+        let localStorageItem = localStorage.getItem(key);
+
+        let cachedData = localStorageItem
+            ? JSON.parse(localStorageItem)
+            : undefined;
+
+        // If cached data exists and doesn't expire, or if cached data expires, but still hasn't
+        if (
+            cachedData &&
+            (!cachedData.expiresAt ||
+                (cachedData.expiresAt &&
+                    cachedData.expiresAt > new Date().toISOString()))
+        ) {
+            return cachedData.value;
+        }
+
+        this.put(key, undefined, ttl);
+
+        let value = await callback();
+        return this.put(key, value, ttl);
+    }
     rememberForever(key, callback) {
         return this.remember(key, null, callback);
     }
